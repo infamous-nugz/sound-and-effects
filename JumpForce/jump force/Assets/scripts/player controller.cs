@@ -6,7 +6,7 @@ public class playercontroller : MonoBehaviour
     public float jumppower = 10;
     public float gravitymodifier;
     public bool isonGround = true;
-
+    public bool  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
