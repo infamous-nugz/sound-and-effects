@@ -6,15 +6,15 @@ public class playercontroller : MonoBehaviour
     public float jumppower = 10;
     public float gravitymodifier;
     public bool isonGround = true;
-    public bool  
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public bool gameOver = false;
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
         Physics.gravity *= gravitymodifier;
-      
-    }
 
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +27,18 @@ public class playercontroller : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        isonGround = true;
+
+
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            isonGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Obastacle"))
+        {
+            Debug.Log("game over");
+            gameOver = true;
+        }
+   
     }
+
 }
