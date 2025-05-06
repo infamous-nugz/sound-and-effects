@@ -33,7 +33,7 @@ public class playercontroller : MonoBehaviour
         {
             isonGround = true;
         }
-        else if (collision.gameObject.CompareTag("Obastacle"))
+        else if (collision.gameObject.CompareTag("Oastacle"))
         {
             Debug.Log("game over");
             gameOver = true;

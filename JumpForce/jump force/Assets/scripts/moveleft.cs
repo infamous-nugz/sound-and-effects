@@ -4,7 +4,7 @@ public class moveleft : MonoBehaviour
 {
     private float speed = 15;
     private playercontroller Playercontrollerscript;
-    private float LeftBound = -10;
+    private float LeftBound = -15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +24,8 @@ public class moveleft : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+
 
     }
 }
